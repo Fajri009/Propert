@@ -7,7 +7,7 @@
     tools:context=".OnBoardPage.ViewPagerAdapter">
 
     <ImageView
-        android:id="@+id/gambarOnboard"
+        android:id="@+id/gambar_onboard"
         android:layout_width="match_parent"
         android:layout_height="440dp"
         android:layout_marginTop="-22dp"
@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/onboard1" />
 
     <TextView
-        android:id="@+id/judulOnboard"
+        android:id="@+id/judul_onboard"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="40dp"
@@ -27,10 +27,10 @@
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gambarOnboard" />
+        app:layout_constraintTop_toBottomOf="@+id/gambar_onboard" />
 
     <TextView
-        android:id="@+id/deskripsiOnboard"
+        android:id="@+id/deskripsi_onboard"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -42,5 +42,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulOnboard" />
+        app:layout_constraintTop_toBottomOf="@+id/judul_onboard" />
 </androidx.constraintlayout.widget.ConstraintLayout>

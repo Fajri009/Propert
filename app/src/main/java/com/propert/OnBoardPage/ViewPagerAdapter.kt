@@ -43,9 +43,9 @@ class ViewPagerAdapter(val context : Context) : PagerAdapter() {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = layoutInflater!!.inflate(R.layout.onboard_layout, container, false)
 
-        val gambar = view.findViewById<ImageView>(R.id.gambarOnboard)
-        val judul = view.findViewById<TextView>(R.id.judulOnboard)
-        val deskripsi = view.findViewById<TextView>(R.id.deskripsiOnboard)
+        val gambar = view.findViewById<ImageView>(R.id.gambar_onboard)
+        val judul = view.findViewById<TextView>(R.id.judul_onboard)
+        val deskripsi = view.findViewById<TextView>(R.id.deskripsi_onboard)
 
         gambar.setImageResource(gambarArray[position])
         judul.text = judulArray[position]

@@ -4,16 +4,14 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.propert.R
-import com.propert.SigninAndLogin.SigninPage
+import com.propert.SigninAndLogin.LoginPage
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class OnBoardPage : AppCompatActivity() {
@@ -27,7 +25,7 @@ class OnBoardPage : AppCompatActivity() {
         setContentView(R.layout.onboard_page)
 
         val dotsIndicator = findViewById<DotsIndicator>(R.id.dots_indicator)
-        val intent = Intent(this, SigninPage::class.java)
+        val intent = Intent(this, LoginPage::class.java)
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
             setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true)
