@@ -26,6 +26,7 @@ class OnBoardPage : AppCompatActivity() {
 
         val dotsIndicator = findViewById<DotsIndicator>(R.id.dots_indicator)
         val intent = Intent(this, LoginPage::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
             setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true)
