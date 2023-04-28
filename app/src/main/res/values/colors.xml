@@ -10,4 +10,7 @@
     <color name="transparent">#00000000</color>
     <color name="theme_color">#1570EF</color>
     <color name="second_theme_color">#D3EAFF</color>
+    <color name="text_box_color">#EFF8FF</color>
+    <color name="grey">#AFB1B6</color>
+    <color name="facebook_color">#3C5A9A</color>
 </resources>
