@@ -17,7 +17,7 @@ class LoginPage : AppCompatActivity() {
         setContentView(R.layout.login_page)
 
         lupaPassword = findViewById(R.id.lupaPassword)
-        daftar = findViewById(R.id.signinButton)
+        daftar = findViewById(R.id.loginButton)
 
         lupaPassword()
         daftar()
