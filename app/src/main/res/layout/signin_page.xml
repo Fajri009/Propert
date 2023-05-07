@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SigninAndLogin.SigninPage">
+    tools:context=".SignInAndSignUp.SignInPage">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/satoshi_bold"
-        android:text="Buat Akun"
+        android:text="Selamat Datang"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/satoshi_regular"
-        android:text="Mulai pengalaman barumu di sini!"
+        android:text="Masuk untuk melanjutkan kursus"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,45 +53,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deskripsi">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/satoshi_regular"
-            android:text="Full Name"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:boxBackgroundColor="@color/text_box_color"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/full_name_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/full_name">
 
         <TextView
             android:layout_width="wrap_content"
@@ -121,7 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/password"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -130,7 +91,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email">
+        app:layout_constraintTop_toBottomOf="@+id/full_name">
 
         <TextView
             android:layout_width="wrap_content"
@@ -160,20 +121,33 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/lupaPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/satoshi_regular"
+        android:text="Lupa Password"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
     <Button
         android:id="@+id/daftar"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-        android:text="Daftar"
+        android:text="Masuk"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/lupaPassword" />
 
     <ImageView
         android:id="@+id/garis1"
@@ -211,7 +185,7 @@
         app:layout_constraintTop_toBottomOf="@+id/daftar" />
 
     <TextView
-        android:id="@+id/google"
+        android:id="@+id/google_signup"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
@@ -224,7 +198,7 @@
         android:text="Google"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/facebook"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_signin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atau" />
 
@@ -234,12 +208,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:src="@drawable/google_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/google"
-        app:layout_constraintStart_toStartOf="@+id/google"
-        app:layout_constraintTop_toTopOf="@+id/google" />
+        app:layout_constraintBottom_toBottomOf="@+id/google_signup"
+        app:layout_constraintStart_toStartOf="@+id/google_signup"
+        app:layout_constraintTop_toTopOf="@+id/google_signup" />
 
     <TextView
-        android:id="@+id/facebook"
+        android:id="@+id/facebook_signin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -253,7 +227,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/google"
+        app:layout_constraintStart_toEndOf="@+id/google_signup"
         app:layout_constraintTop_toBottomOf="@+id/atau" />
 
     <ImageView
@@ -262,18 +236,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:src="@drawable/facebook_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/facebook"
-        app:layout_constraintStart_toEndOf="@+id/google"
-        app:layout_constraintStart_toStartOf="@+id/facebook"
-        app:layout_constraintTop_toTopOf="@+id/facebook" />
+        app:layout_constraintBottom_toBottomOf="@+id/facebook_signin"
+        app:layout_constraintStart_toEndOf="@+id/google_signup"
+        app:layout_constraintStart_toStartOf="@+id/facebook_signin"
+        app:layout_constraintTop_toTopOf="@+id/facebook_signin" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/google">
+        app:layout_constraintTop_toBottomOf="@+id/google_signup">
 
         <TextView
             android:id="@+id/loginText"
@@ -283,7 +257,7 @@
             android:fontFamily="@font/satoshi_regular"
             android:gravity="end"
             android:paddingEnd="10dp"
-            android:text="Sudah mempunyai akun?"
+            android:text="Belum mempunyai akun?"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
@@ -293,7 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/satoshi_bold"
-            android:text="Masuk"
+            android:text="Daftar"
             android:textColor="@color/theme_color"
             android:textSize="17sp" />
     </LinearLayout>

@@ -10,8 +10,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.google.firebase.auth.FirebaseAuth
+import com.propert.MainActivity
 import com.propert.R
-import com.propert.SigninAndLogin.LoginPage
+import com.propert.SignInAndSignUp.SignInPage
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class OnBoardPage : AppCompatActivity() {
@@ -25,7 +27,7 @@ class OnBoardPage : AppCompatActivity() {
         setContentView(R.layout.onboard_page)
 
         val dotsIndicator = findViewById<DotsIndicator>(R.id.dots_indicator)
-        val intent = Intent(this, LoginPage::class.java)
+        val intent = Intent(this, SignInPage::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
 
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
@@ -98,6 +100,13 @@ class OnBoardPage : AppCompatActivity() {
             } else {
                 viewPager.currentItem += 1
             }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

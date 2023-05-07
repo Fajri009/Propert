@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SigninAndLogin.LoginPage"
+            android:name=".SignInAndSignUp.SignInPage"
             android:exported="true"/>
         <activity
-            android:name=".SigninAndLogin.LupaPasswordPage"
+            android:name=".SignInAndSignUp.LupaPasswordPage"
             android:exported="true"/>
         <activity
-            android:name=".SigninAndLogin.SigninPage"
+            android:name=".SignInAndSignUp.SignUpPage"
             android:exported="true"/>
         <activity
             android:name=".MainActivity"

@@ -1,4 +1,4 @@
-package com.propert.SigninAndLogin
+package com.propert.SignInAndSignUp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
